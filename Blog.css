@@ -1,0 +1,145 @@
+/* styles.css */
+
+/* General styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  color: #333;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 100px 20px;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+header h1,
+.nav-menu {
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.about {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.about h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.post {
+  margin-bottom: 40px;
+}
+
+.post h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.recent-posts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.recent-posts ul li {
+  margin-bottom: 8px;
+}
+
+.recent-posts ul li a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.recent-posts ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+}
